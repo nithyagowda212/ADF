@@ -1,0 +1,22 @@
+{
+	"name": "ls_seq_server_dynamic",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"database": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=localhost\\MSSQLSERVER212;initial catalog=@{linkedService().database}",
+			"userName": "localhost\\HP",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyMTg2OWI0Yi1jMDgzLTQ4ZDYtYTBkNC1lYTVmM2E4ZWQ4MWQiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "selfhostedintegrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
